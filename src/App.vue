@@ -1,9 +1,7 @@
 <template>
   <Layout>
     <div>
-      <div style="margin: 1rem 0;">
-        <PiniaLogo />
-      </div>
+      <BielLogo />
 
       <h2>Hello {{ user.name }}</h2>
 
@@ -19,7 +17,9 @@
             <button
               @click="cart.removeItem(item.name)"
               type="button"
-            >X</button>
+            >
+             X
+            </button>
           </li>
         </ul>
 
@@ -37,14 +37,14 @@
 
 <script lang="ts">
 import Layout from './layouts/default.vue'
-import PiniaLogo from './components/PiniaLogo.vue'
+import BielLogo from './components/BielLogo.vue'
 
 import { defineComponent, ref } from 'vue'
 import { useUserStore } from './stores/user'
 import { useCartStore } from './stores/cart'
 
 export default defineComponent({
-  components: { Layout, PiniaLogo },
+  components: { Layout, BielLogo },
 
   setup() {
     const user = useUserStore()
